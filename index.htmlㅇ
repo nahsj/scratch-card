@@ -99,3 +99,11 @@
 
 </body>
 </html>
+cute-bg.png
+const img = new Image();
+img.src = 'cute-bg.png'; // 깔끔한 파일 이름으로 경로 지정
+
+img.onload = () => {
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  ctx.globalCompositeOperation = 'destination-out';
+};
